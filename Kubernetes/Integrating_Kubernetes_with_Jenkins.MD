@@ -14,8 +14,8 @@
      - Copy from: `Deploy_on_Docker_Container_using_Ansible_playbooks`
      
    - *Source Code Management:*
-      - Repository: `https://github.com/yankils/hello-world.git`
-      - Branches to build : `*/master`  
+      - Repository: `https://github.com/amit873/Kubernetes-Ansible-Docker-Project.git`
+      - Branches to build : `*/main`  
    - *Poll SCM* :      - `* * * *`
 
    - *Build:*
@@ -49,7 +49,7 @@ Save and run the job.
       - *SSH Publishers*  
 	       - Exec command: 
                 ```sh 
-                ansible-playbook -i /opt/docker/hosts /opt/docker/kubernetes-valaxy-deployment.yml;
-                ansible-playbook -i /opt/docker/hosts /opt/docker/kubernetes-valaxy-service.yml;
+                ansible-playbook -i /opt/docker/hosts /opt/docker/kubernetes-amit-deployment.yml;
+                ansible-playbook -i /opt/docker/hosts /opt/docker/kubernetes-amit-service.yml;
                 ```
 Save and run the job.
