@@ -1,0 +1,23 @@
+---
+- hosts: all
+  become: true
+  
+  tasks:
+  
+  - name: stop current running container
+    command: docker stop simple-devops-container
+    ignore_errors: yes
+
+  - name: remove stopped docker container
+    command: docker rm simple-devops-container
+    ignore_errors: yes
+
+  - name: remove current docker image
+    command: docker rmi ameintu/simple-devops-image:latest
+    ignore_errors: yes
+
+  - name: pull docker image from dockerhub
+    command: docker pull ameintu/simple-devops-image:latest
+
+  - name: creating docker container using simple-devops-image
+    command: docker run -d --name simple-devops-container -p 8080:8080 ameintu/simple-devops-image:latest
