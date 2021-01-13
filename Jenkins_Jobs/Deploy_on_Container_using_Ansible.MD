@@ -11,7 +11,7 @@
    # Pull tomcat latest image from dockerhub 
    From tomcat
    # Maintainer
-   MAINTAINER "AR Shankar" 
+   MAINTAINER "Amit Kumar Gupta" 
 
    # copy war file on to container 
    COPY ./webapp.war /usr/local/tomcat/webapps
@@ -63,7 +63,7 @@ Enable connection between Ansible-control-node and Jenkins
      
    - *Source Code Management:*
       - Repository: `https://github.com/amit873/Kubernetes-Ansible-Docker-Project.git`
-      - Branches to build : `*/master`  
+      - Branches to build : `*/main`  
    - *Poll SCM* :      - `* * * *`
 
    - *Build:*
