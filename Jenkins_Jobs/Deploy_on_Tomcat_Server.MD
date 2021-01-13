@@ -29,7 +29,7 @@
      
    - *Source Code Management:*
       - Repository: `https://github.com/amit873/Kubernetes-Ansible-Docker-Project.git`
-      - Branches to build : `*/master`  
+      - Branches to build : `*/main`  
    - *Poll SCM* :      - `* * * *`
 
    - *Build:*
