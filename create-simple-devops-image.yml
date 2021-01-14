@@ -16,5 +16,5 @@
       command: docker push ameintu/simple-devops-image
 
     - name: remove docker images from ansible server
-      command: docker rmi simple-devops-image:latest ameintu/simple-devops-image
+      command: docker rmi tomcat simple-devops-image:latest ameintu/simple-devops-image
       ignore_errors: yes
