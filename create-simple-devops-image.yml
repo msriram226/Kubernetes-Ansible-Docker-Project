@@ -1,20 +1,20 @@
 ---
 - hosts: all
-  become: true
-  
+  become: yes
+
   tasks:
-  
-  - name: create docker image using war file
-    command: docker build -t simple-devops-image:latest .
-    args:
-      chdir: /opt/docker
 
-  - name: create tag to image
-    command: docker tag simple-devops-image ameintu/simple-devops-image
+    - name: create docker image using war file
+      command: docker build -t simple-devops-image:latest .
+      args:
+        chdir: /opt/docker
 
-  - name: push image on to dockerhub
-    command: docker push ameintu/simple-devops-image
+    - name: create tag to image
+      command: docker tag simple-devops-image ameintu/simple-devops-image
 
-  - name: remove docker images from ansible server
-    command: docker rmi simple-devops-image:latest ameintu/simple-devops-image
-    ignore_error: yes
+    - name: push image on to dockerhub
+      command: docker push ameintu/simple-devops-image
+
+    - name: remove docker images from ansible server
+      command: docker rmi simple-devops-image:latest ameintu/simple-devops-image
+      ignore_errors: yes
