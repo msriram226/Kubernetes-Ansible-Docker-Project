@@ -2,7 +2,7 @@
 - name: Create pods using deployment 
   hosts: kubernetes 
   # become: true
-  user: ubuntu
+  user: root
  
   tasks: 
   - name: create a deployment
