@@ -2,4 +2,5 @@
 localhost
 
 [kubernetes]
-<kubernetes Public IP>
+localhost
+#<kubernetes Public IP>
