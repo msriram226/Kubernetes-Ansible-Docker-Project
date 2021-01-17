@@ -15,7 +15,7 @@
     gcloud --version
     ```
 
-3. Install kubectl on ubuntu instance
+3. Install Kubectl on Ubuntu Instance
    ```sh
     curl -Lo kubectl https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
     chmod +x ./kubectl
@@ -23,7 +23,7 @@
     kubectl version
    ```
 
-4. Install kops on ubuntu instance
+4. Install kops on Uuntu Instance
    ```sh
     curl -Lo kops https://github.com/kubernetes/kops/releases/download/$(curl -s https://api.github.com/repos/kubernetes/kops/releases/latest | grep tag_name | cut -d '"' -f 4)/kops-linux-amd64
     chmod +x ./kops
@@ -31,7 +31,7 @@
     kops version
     ```
 
-5.  Configure default credentials for creating Bcket
+5.  Configure Default Credentials for Creating Bucket
     ```sh
     gcloud auth login
     gcloud auth application-default login
@@ -68,7 +68,7 @@
      ssh-keygen
    ```
 
-11. Check gcloud Info details
+11. Check gcloud Info Details
    ```sh
     gcloud info
     echo $PROJECT
@@ -80,7 +80,7 @@
     # to unlock the GCE features
     export KOPS_FEATURE_FLAGS=AlphaAllowGCE
     kops create cluster simple.k8s.local --zones us-central1-a --state ${KOPS_STATE_STORE}/ --project=${PROJECT}
-    ```
+   ```
 
 13. Edit kubernetes cluser
     ```sh
@@ -145,7 +145,7 @@
     gsutil ls gs://ameintu/
     ```
 
-22. Check Resources using gcloud Command
+23. Check Resources using gcloud Command
      ```sh
     gcloud compute zones list
     gcloud compute instances list
